@@ -16,25 +16,29 @@ toilets- Conté atributs compostos per mostrar si el recinte té lavabos o no.
    country- Per mostrar els països d'on és cada grup.
    number of members- Quants membres hi ha en un grup.
    price- El preu que cobren per actuar en un concert. Es representa amb una el·lipse de punts perquè cada grup no cobra el mateix per     cada concert.
+   
+ 5. REPLACEMENT GROUP(associative for GROUP)
+    name- conté el nom del grup de substitució
+    group_id- conté l'identificador del grup de substitució
 
-4. CONCERT PROGRAM
+6. CONCERT PROGRAM
    group_id(foreign key)- Conté l'identificador del grup que actua en un recinte determinat.
    price- El preu cobrat pel concert.
    start day- El dia en què comença el concert.
    start time- L'hora en què comença el concert.
    end time- L'hora en què acaba el concert.
 
-5. STREET
+7. STREET
    street_code(primary key)- Conté el codi del carrer.
    name- Conté el nom del carrer.
 
-6. PLOT
+8. PLOT
    plot_number(primary key)- Conté el número de parcel·la.
    street_code(foreign key)- Conté el codi del carrer on es troba la parcel·la. 
    ext.square meters- conté els metres quadrats de la parcel·la.
    price- Conté el preu de la parcel.la.
 
-7.  ATTENDEES- conté informació sobre les persones assistents al festival.
+9.  ATTENDEES- conté informació sobre les persones assistents al festival.
     id(primary key)- Unique identifier for each attendee.
     username-  Unique username for each attendee.
     password- Emmagatzema la contrasenya dels assistents per accedir al compte.
@@ -42,16 +46,16 @@ toilets- Conté atributs compostos per mostrar si el recinte té lavabos o no.
     firstname- Nom de l'assistent.
     lastname- Cognom de l'assistent.
     
-9. RENTALS- conté informació sobre parcel·les de lloguer
+10. RENTALS- conté informació sobre parcel·les de lloguer
    rental_id(primary key)- Identificador únic per a cada lloguer.
    plot_id(foreign key)-  Referència a la parcel·la llogada.
    manager_id(foreign key)- Reference to manager responsible.
 
-10. MANAGER
+11. MANAGER
    manager_id(primary key)-  Unique identifier for each manager.
    username- Username for the manager.
 
-11. ACCESS (Associative for venue access)
+12. ACCESS (Associative for venue access)
     venue_id(foreign key)- Enllaça els registres d'accés al lloc.
     attendee_id(foreign key)- Enllaça el registre d'accés a l'assistent específic.
     access time- La data i l'hora en què l'assistent va accedir al recinte.
